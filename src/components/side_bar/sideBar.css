@@ -1,0 +1,40 @@
+.left{
+    /* width: 15%; */
+    width: 17%;
+    
+}
+
+.side__bar-logo{
+    padding: 12px 24px;
+    border-bottom: 1px solid #EBEEF6;
+
+}
+
+.side__bar-logo img{
+    height: 23px;
+}
+
+.side__bar{
+    position: relative;
+    padding: 32px 12px;
+    display: block;
+}
+
+.side__bar-item{
+    background-color: #F5F6FA;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+/* 
+.side__bar-item:hover{
+    color: white;
+     background-color: #177EFF; 
+} */
+
+.side__bar-item img{
+    margin-right: 10px;
+}

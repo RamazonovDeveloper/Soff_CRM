@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  box-sizing: border-box;
+}
+
+.blue_button{
+  color: white;
+  background-color: #177EFF;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 44px;
+  padding-left: 44px;
+  padding-right: 44px;
+  cursor: pointer;
+}
+
+.input_styles{
+  display: flex;
+  background-color: #F5F6FA;
+  padding: 10px;
+  width: 40%;
+  border-radius: 8px;
+  justify-content: space-between;
+}
+
+
+.input_styles > input{
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #667281;
+  background-color: transparent;
+  flex-grow: 1;
+}
+
+
+.input_styles > img{
+  height: 20px;
+  cursor: pointer;
+}
+
+:root{
+  --main-transition:0.3s ease;
+}

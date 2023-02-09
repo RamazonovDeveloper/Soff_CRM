@@ -1,0 +1,120 @@
+.filters{
+    padding: 16px 24px;
+}
+
+.filters__search{
+    display: flex;
+    background-color: #F5F6FA;
+    padding: 10px;
+    width: 40%;
+    border-radius: 8px;
+    justify-content: space-between;
+}
+
+.filters__search > input{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #667281;
+    background-color: transparent;
+    flex-grow: 1;
+}
+
+.mine{
+    display: flex;
+    justify-content: space-between;
+    /* color: white; */
+}
+
+.filters__search > img{
+    height: 20px;
+    cursor: pointer;
+}
+
+/* .filters__button{
+    color: white;
+    background-color: #177EFF;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    padding-left: 44px;
+    padding-right: 44px;
+    cursor: pointer;
+} */
+
+.filters__filterButtons{
+    margin-top: 12px;
+    display: flex;
+}
+
+.filters__filterButtons__but{
+    width: 140px;
+    display: flex;
+    margin-right: 8px;
+    background-color: #F5F6FA;
+    align-items: center;
+    border-radius: 8px;
+    padding: 8px 8px 8px 12px;
+    transition: var(--main-transition);
+}
+
+.filters__filterButtons__but button{
+    /* color: black; */
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.filters__filterButtons__but p{
+    background-color: #B2C2DF;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    border-radius: 45%;
+    color: white;
+}
+
+.filters__filterButtons__but:hover,
+.filters__filterButtons__but-active {
+    background-color: #177EFF;
+}
+
+/* .filters__filterButtons__but-active {
+    background-color: #177EFF;
+} */
+
+.filters__filterButtons__but:hover button,
+.filters__filterButtons__but-active button{
+    color: white;
+}
+
+.filters__filterButtons__but:hover p,
+.filters__filterButtons__but-active p{
+    background-color: #70AEFD;
+}
+
+/* .filters__filterButtons button{
+    width: 140px;
+    display: flex;
+    margin-right: 8px;
+    color: black;
+    background-color: #F5F6FA;
+    font-size: 16px;
+    border: none;
+    padding: 8px 8px 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+} */
+
+/* .filters__filterButtons button div{
+    background-color: #B2C2DF;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    border-radius: 45%;
+} */
