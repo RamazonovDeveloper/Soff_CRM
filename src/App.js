@@ -1,17 +1,13 @@
 import './App.css';
 
-import logo from './assets/logo.svg'
 import SideBar from './components/side_bar/SideBar';
-import Filters from './components/status_filter/Filters';
-import Table from './components/table/Table';
 import All from './pages/All';
 import New_post from './pages/New_post'
 
-import {BrowserRouter, json, Route, Routes} from 'react-router-dom'
-import { useEffect, useState } from 'react';
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import { useState } from 'react';
 
 
-// localStorage.setItem("Posts", JSON.stringify(posts))
 
 
 
@@ -50,16 +46,6 @@ function App() {
           </BrowserRouter>
         </div>
         
-        {/* <All/> */}
-        {/* <div className='main__field'>
-          <div className='main__field-top'>
-            <p>Posts</p>
-          </div>
-          <div className='main__field-white'>
-            <Filters/>
-            <Table tableData={posts}/>
-          </div>
-        </div> */}
       </div>
     </div>
   );

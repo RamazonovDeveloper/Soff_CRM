@@ -15,10 +15,12 @@ function Table(props) {
 
   const [page, setPage] = useState(1);
 
+  const [itemsPerPage, setItemsPerPage] = useState(4)
+
   let localPosts = [];
 
   let k = 0;
-  for (let i = (page - 1) * 4; i < page * 4; i++) {
+  for (let i = (page - 1) * itemsPerPage; i < page * itemsPerPage; i++) {
     if (props.tableData.length == i) {
       break;
     }
@@ -30,19 +32,8 @@ function Table(props) {
 
       
     let data = JSON.parse(localStorage.getItem("Posts"))
-      
-    console.log("data is ")
-    console.log(data)
-
 
     data[id-1].status = status
-
-    console.log("Changed data is ")
-    console.log(data)
-
-    console.log("Changed item " + id)
-    console.log("Value " + status)
-
 
     localStorage.setItem("Posts", JSON.stringify(data))
   }
@@ -57,7 +48,7 @@ function Table(props) {
       </div>
 
       {localPosts.map((item, index) => (
-        <div className="tempCol">
+        <div className={itemsPerPage == 4 ? "tempCol" : "tempColFor5"} >
           <div className="defColId">{(page - 1) * 4 + index + 1}</div>
           <div className="defColTitle">{item.title}</div>
           <div className="defColTime">{item.time}</div>
@@ -75,24 +66,34 @@ function Table(props) {
       ))}
 
       <div className="pagination">
-        <button className="page_button">
-          <img src={prev} alt="" />
-        </button>
-        {pages.map((item) => {
-          return (
-            <button
-              className={
-                page == item ? "page_button page_button-active" : "page_button"
-              }
-              onClick={() => setPage(item)}
-            >
-              {item}
-            </button>
-          );
-        })}
-        <button className="page_button">
-          <img src={next} alt="" />
-        </button>
+
+        <div className="itemp_per_page">
+          <select onChange={(e) => setItemsPerPage(e.target.value)} name="" id="">
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+          
+        <div>
+          <button className="page_button">
+            <img src={prev} alt="" />
+          </button>
+          {pages.map((item) => {
+            return (
+              <button
+                className={
+                  page == item ? "page_button page_button-active" : "page_button"
+                }
+                onClick={() => setPage(item)}
+              >
+                {item}
+              </button>
+            );
+          })}
+          <button className="page_button">
+            <img src={next} alt="" />
+          </button>
+        </div>
       </div>
     </div>
   );

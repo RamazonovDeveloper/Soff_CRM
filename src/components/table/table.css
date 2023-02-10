@@ -1,4 +1,4 @@
-.defCol, .tempCol{
+.defCol, .tempCol, .tempColFor5{
     display: grid;
     grid-template-columns: 1fr 9fr 6fr 6fr;
     padding: 12px 24px;
@@ -17,11 +17,14 @@
     padding: 25px;
 }
 
+.tempColFor5{
+    padding: 18px 25px;
+}
+
 .defColStatus select{
     border: none;
     font-size: 16px;
     outline: none;
-    /* padding: 5px; */
 }
 
 .defColStatus select select{
@@ -36,10 +39,12 @@
 
 
 .pagination{
+    padding: 0 24px;
     margin-top: auto;
-    margin-bottom: 20px;
-    margin-right: 50px;
-    margin-left: auto;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .page_button{
@@ -61,4 +66,14 @@
 .arrow{
     background-color: black;
 
+}
+
+.itemp_per_page select{
+    padding: 10px;
+    padding-right: 15px;
+    border: none;
+    background-color: #F5F6FA;
+    font-size: 16px;
+    outline: none;
+    border-radius: 4px;
 }

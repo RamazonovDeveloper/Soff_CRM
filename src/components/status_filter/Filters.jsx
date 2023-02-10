@@ -15,7 +15,6 @@ function Filters(props) {
     return selectedPosts.length
   }
   
-  // const [status,setStatus] = useState('all')
 
   return (
     <div className='filters'>

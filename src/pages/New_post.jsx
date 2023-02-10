@@ -14,17 +14,28 @@ function New_post() {
   const dataInp = useRef()
 
   const setPosts = () => {
-    let posts = JSON.parse(localStorage.getItem("Posts"))
-    const newPost = {
-      id:posts.length+1,
-      title:titleInp.current.value,
-      time:dataInp.current.value,
-      status:statusInp
+
+    console.log(titleInp.current.value)
+    console.log(dataInp.current.value)
+    console.log(statusInp)
+
+    if(titleInp.current.value == '' && dataInp.current.value == '' && statusInp == 'default'){
+      alert("Enter data to create New Post !!!")
+    }else{
+      let posts = JSON.parse(localStorage.getItem("Posts"))
+      const newPost = {
+        id:posts.length+1,
+        title:titleInp.current.value,
+        time:dataInp.current.value,
+        status:statusInp
+      }
+      posts.push(newPost)
+      localStorage.setItem("Posts", JSON.stringify(posts))
+      titleInp.current.value = ''
+      dataInp.current.value = ''
     }
-    posts.push(newPost)
-    localStorage.setItem("Posts", JSON.stringify(posts))
-    titleInp.current.value = ''
-    dataInp.current.value = ''
+
+    
   }
 
   return (

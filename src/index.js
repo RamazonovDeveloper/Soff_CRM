@@ -38,10 +38,6 @@ const posts = [
   }
 ]
 
-
-// console.log(localStorage.getItem("Posts"))
-
-
 if (!localStorage.getItem("Posts")) {
   localStorage.setItem("Posts", JSON.stringify(posts))
   

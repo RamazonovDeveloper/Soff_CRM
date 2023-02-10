@@ -23,7 +23,6 @@
 .mine{
     display: flex;
     justify-content: space-between;
-    /* color: white; */
 }
 
 .filters__search > img{
@@ -31,16 +30,6 @@
     cursor: pointer;
 }
 
-/* .filters__button{
-    color: white;
-    background-color: #177EFF;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    padding-left: 44px;
-    padding-right: 44px;
-    cursor: pointer;
-} */
 
 .filters__filterButtons{
     margin-top: 12px;
@@ -59,7 +48,6 @@
 }
 
 .filters__filterButtons__but button{
-    /* color: black; */
     font-size: 16px;
     background: transparent;
     border: none;
@@ -82,9 +70,6 @@
     background-color: #177EFF;
 }
 
-/* .filters__filterButtons__but-active {
-    background-color: #177EFF;
-} */
 
 .filters__filterButtons__but:hover button,
 .filters__filterButtons__but-active button{
@@ -95,26 +80,3 @@
 .filters__filterButtons__but-active p{
     background-color: #70AEFD;
 }
-
-/* .filters__filterButtons button{
-    width: 140px;
-    display: flex;
-    margin-right: 8px;
-    color: black;
-    background-color: #F5F6FA;
-    font-size: 16px;
-    border: none;
-    padding: 8px 8px 8px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-} */
-
-/* .filters__filterButtons button div{
-    background-color: #B2C2DF;
-    margin-left: auto;
-    margin-right: 0;
-    padding: 4px 8px;
-    display: flex;
-    align-items: center;
-    border-radius: 45%;
-} */

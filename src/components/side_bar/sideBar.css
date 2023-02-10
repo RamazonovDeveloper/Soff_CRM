@@ -1,5 +1,4 @@
 .left{
-    /* width: 15%; */
     width: 17%;
     
 }
@@ -29,11 +28,6 @@
     padding: 8px 16px;
     cursor: pointer;
 }
-/* 
-.side__bar-item:hover{
-    color: white;
-     background-color: #177EFF; 
-} */
 
 .side__bar-item img{
     margin-right: 10px;
