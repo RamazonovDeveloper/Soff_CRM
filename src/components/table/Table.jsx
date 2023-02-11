@@ -29,7 +29,6 @@ function Table(props) {
   }
 
   const selectChanged = (id, status) => {
-
       
     let data = JSON.parse(localStorage.getItem("Posts"))
 
@@ -47,23 +46,25 @@ function Table(props) {
         <div className="defColStatus">Status</div>
       </div>
 
-      {localPosts.map((item, index) => (
-        <div className={itemsPerPage == 4 ? "tempCol" : "tempColFor5"} >
-          <div className="defColId">{(page - 1) * 4 + index + 1}</div>
-          <div className="defColTitle">{item.title}</div>
-          <div className="defColTime">{item.time}</div>
-          <div className="defColStatus">
-            <select onChange={(e) => selectChanged(item.id,e.target.value)} name="" id="">
-              <option selected={item.status == "Published"} value="Published">
-                Published
-              </option>
-              <option selected={item.status == "Draft"} value="Draft">
-                Draft
-              </option>
-            </select>
+      <div className="table_data">
+        {localPosts.map((item, index) => (
+          <div className={itemsPerPage == 4 ? "tempCol" : "tempColFor5"} >
+            <div className="defColId">{(page - 1) * 4 + index + 1}</div>
+            <div className="defColTitle">{item.title}</div>
+            <div className="defColTime">{item.time}</div>
+            <div className="defColStatus">
+              <select onChange={(e) => selectChanged(item.id,e.target.value)} name="" id="">
+                <option selected={item.status == "Published"} value="Published">
+                  Published
+                </option>
+                <option selected={item.status == "Draft"} value="Draft">
+                  Draft
+                </option>
+              </select>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
 
       <div className="pagination">
 
@@ -73,9 +74,12 @@ function Table(props) {
             <option value="5">5</option>
           </select>
         </div>
-          
+          {/* className={itemsPerPage == 1 ? "itemp_per_page disabled_button" : "itemp_per_page"} */}
         <div>
-          <button className="page_button">
+          <button 
+          onClick={() => {if(page != 1)setPage(page-1)}} 
+          className={page == 1 ? "disabled_button" : "page_button"
+          }>
             <img src={prev} alt="" />
           </button>
           {pages.map((item) => {
@@ -90,7 +94,10 @@ function Table(props) {
               </button>
             );
           })}
-          <button className="page_button">
+          <button 
+          onClick={() => {if(page != PageCount)setPage(page+1)}}  
+          className={page == PageCount ? "disabled_button" : "page_button"
+          }>
             <img src={next} alt="" />
           </button>
         </div>
